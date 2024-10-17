@@ -8,6 +8,7 @@
 
     <ItemGroup>
         <PackageReference Include="BlazorStatic" Version="1.0.0-beta.13" />
+        <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.10.2" />
     </ItemGroup>
 
     <ItemGroup>
@@ -22,7 +23,10 @@
         <Watch Include="Content/**/*" />
     </ItemGroup>
     <ItemGroup>
-      <None Remove="README.md" />
+      <None Remove="tailwind.config.js" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="tailwind.config.js" />
     </ItemGroup>
 
 
