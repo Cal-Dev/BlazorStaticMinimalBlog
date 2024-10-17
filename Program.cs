@@ -7,14 +7,17 @@ builder.WebHost.UseStaticWebAssets();
 
 builder.Services.AddBlazorStaticService(opt => {
     //opt. //check to change the defaults
+    opt.IgnoredPathsOnContentCopy.Add("app.css");
+    opt.AddPagesWithoutParameters = true;
+    opt.
+    opt.MarkdownPipeline = new Markdig.MarkdownPipelineBuilder().UseAdvancedExtensions().Build();
 
-   
 }
 ).AddBlazorStaticContentService<BlogFrontMatter>(opt =>
 {
     opt.PageUrl = "blog";
     opt.TagsPageUrl = "tags";
-});
+}).po;
 
 builder.Services.AddRazorComponents();
 
