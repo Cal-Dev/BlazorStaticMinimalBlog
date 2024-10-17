@@ -7,8 +7,14 @@ builder.WebHost.UseStaticWebAssets();
 
 builder.Services.AddBlazorStaticService(opt => {
     //opt. //check to change the defaults
+
+   
 }
-).AddBlazorStaticContentService<BlogFrontMatter>();
+).AddBlazorStaticContentService<BlogFrontMatter>(opt =>
+{
+    opt.PageUrl = "blog";
+    opt.TagsPageUrl = "tags";
+});
 
 builder.Services.AddRazorComponents();
 
