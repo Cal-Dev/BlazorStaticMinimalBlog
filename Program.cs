@@ -30,9 +30,9 @@ builder.Services.AddBlazorStaticService(opt => {
     opt.HotReloadEnabled = true;
 }).AddBlazorStaticContentService<BlogFrontMatter>().AddBlazorStaticContentService<ProjectFrontMatter>(opt => {
     opt.MediaFolderRelativeToContentPath = null;
-    opt.ContentPath = Path.Combine("Content", "Projects");
+    //opt.ContentPath = Path.Combine("Content", "Projects");
     opt.AddTagPagesFromPosts = false;
-    opt.PageUrl = WebsiteKeys.ProjectsUrl;
+   // opt.PageUrl = WebsiteKeys.ProjectsUrl;
 });
 
 
